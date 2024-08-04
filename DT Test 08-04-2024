@@ -1,0 +1,50 @@
+def calculate_premium(gender, birth_year, smoker):
+    premium = 0
+    discount = 0
+
+    if gender.lower() == 'male':
+        if 1990 <= birth_year <= 2000:
+            if smoker.lower() == 'yes':
+                premium = 35000
+                print(f"Your annual premium is Rs {premium}")
+            else:
+                premium = 35000
+                discount = 0.10 * premium
+                final_price = premium - discount
+                print(f"Your annual premium after discount is Rs {final_price}")
+        elif 1970 <= birth_year < 1990:
+            if smoker.lower() == 'yes':
+                premium = 40000
+                print(f"Your annual premium is Rs {premium}")
+            else:
+                premium = 40000
+                discount = 0.05 * premium
+                final_price = premium - discount
+                print(f"Your annual premium after discount is Rs {final_price}")
+
+    elif gender.lower() == 'female':
+        if 1990 <= birth_year <= 2000:
+            if smoker.lower() == 'yes':
+                premium = 30000
+                print(f"Your annual premium is Rs {premium}")
+            else:
+                premium = 30000
+                discount = 0.10 * premium
+                final_price = premium - discount
+                print(f"Your annual premium after discount is Rs {final_price}")
+        elif 1970 <= birth_year < 1990:
+            if smoker.lower() == 'yes':
+                premium = 35000
+                print(f"Your annual premium is Rs {premium}")
+            else:
+                premium = 35000
+                discount = 0.05 * premium
+                final_price = premium - discount
+                print(f"Your annual premium after discount is Rs {final_price}")
+
+    else:
+        print("Invalid input")
+
+# Example usage
+calculate_premium('male', 1995, 'yes')
+calculate_premium('female', 1985, 'no')
